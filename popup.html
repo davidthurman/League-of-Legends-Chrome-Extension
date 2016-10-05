@@ -1,0 +1,74 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html style="width:700px;height:500px;">
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+/*        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;*/
+      }
+      .single-video-container{
+        color:#ffffff;
+        background-color: #404040;
+        width:700px;
+        height:300px;
+      }
+      .container-main-section {
+        text-align: center;
+        margin: 0px auto;
+        width: 100%;
+        display:flex;
+        float: left;
+
+      }
+      .container-main-section > div, .thumbnail-wrapper {
+        display: inline-block;
+        width: 33%;
+        float: left;
+      }
+      .thumbnail {
+        width: 100%;
+        height:auto;
+        width:80%;
+        margin: 0 10%;
+        display: block;
+        float: left;
+      }
+      .single-video-summary {
+        position: relative;
+        display: inline-block;
+      }
+
+
+      a, u {
+          text-decoration: none;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <input type="text" name="search" id="searchBox" placeholder="Enter a Summoner Name">
+    <button type="button" id="searchButton">Click Me!</button>
+  </body>
+</html>
+
